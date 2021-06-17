@@ -33,7 +33,6 @@ app.get('/', (req, response) => {
             pgcon.query('SELECT * FROM productlist WHERE masanpham = $1', [req.query.id], (err, res) => {
                 if (err) {
                     response.render('main', {
-                        errors: sanitizeHtml(err.message),
                         masp: sanitizeHtml(req.query.id),
                     });
                 } else {
