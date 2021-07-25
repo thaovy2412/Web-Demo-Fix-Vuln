@@ -137,28 +137,28 @@
       <div class="infoSearch">
         <% if (typeof products!=='undefined' ) { %>
         <span class="masp"
-          >Kết quả tìm kiếm cho mã sản phẩm '<%- masp %>' là:</span
+          >Kết quả tìm kiếm cho mã sản phẩm '<%= masp %>' là:</span
         >
         <hr />
         <% } %> <% if (typeof errors!=='undefined' ) { %>
         <span class="noresult"
-          >Không có kết quả tìm kiếm cho mã sản phẩm '<%- masp %>'</span
+          >Không có kết quả tìm kiếm cho mã sản phẩm '<%= masp %>'</span
         >
         <hr />
-        <em class="error">Error: <%- errors %> </em>
+        <em class="error">Error: <%= errors %> </em>
         <% } %> <% if (typeof products==='undefined' && typeof
         errors==='undefined' ) { %>
         <span class="noresult"
-          >Không có kết quả tìm kiếm cho mã sản phẩm '<%- masp %>'</span
+          >Không có kết quả tìm kiếm cho mã sản phẩm '<%= masp %>'</span
         >
         <hr />
         <% } %> <% if (typeof products!=='undefined' ){ %> <%
         products.forEach((product)=> { %>
         <div class="card">
-          <img class="card-img-top" src="<%- product.hinhanh %>" />
+          <img class="card-img-top" src="<%= product.hinhanh %>" />
           <div class="card-body">
-            <h4 class="card-title"><%- product.tensanpham %></h4>
-            <p class="card-text">Số lượng: <%- product.soluong %></p>
+            <h4 class="card-title"><%= product.tensanpham %></h4>
+            <p class="card-text">Số lượng: <%= product.soluong %></p>
           </div>
           <div class="btnDetail">
             <button>Chi tiết sản phẩm</button>
